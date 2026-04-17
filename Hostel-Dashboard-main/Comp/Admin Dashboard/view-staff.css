@@ -1,0 +1,244 @@
+/* view-staff.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9ecef;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+    max-width: 800px; /* Fixed width to prevent stretching */
+    margin: 20px auto; /* Center horizontally and add top and bottom margin */
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px; /* Reduced margin */
+}
+
+h1 {
+    color: #343a40;
+    font-size: 24px; /* Adjusted font size */
+    margin: 0;
+}
+
+.staff-info {
+    margin-bottom: 20px;
+}
+
+.info-card {
+    padding: 15px; /* Adjusted padding */
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 8px; /* Adjusted padding */
+    margin-bottom: 15px; /* Adjusted margin */
+}
+
+.profile-picture {
+    margin-right: 15px; /* Adjusted margin */
+    flex-shrink: 0;
+}
+
+.profile-picture img {
+    width: 80px; /* Adjusted size */
+    height: 80px; /* Adjusted size */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff;
+}
+
+.info-header h2 {
+    color: #007bff;
+    margin: 0;
+    font-size: 20px; /* Adjusted font size */
+}
+
+.info-body {
+    font-size: 14px; /* Adjusted font size */
+    color: #495057;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0; /* Adjusted padding */
+    border-bottom: 1px solid #dee2e6;
+    transition: background-color 0.3s ease;
+}
+
+.info-row:hover {
+    background-color: #f1f1f1;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #343a40;
+    flex: 1;
+    transition: color 0.3s ease;
+}
+
+.info-label:hover {
+    color: #007bff;
+}
+
+.info-value {
+    flex: 2;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.info-value:hover {
+    color: #007bff;
+}
+
+.password-row {
+    position: relative;
+}
+
+#staffPassword {
+    border: none;
+    background: transparent;
+    font-size: 14px; /* Adjusted font size */
+    color: #495057;
+    outline: none;
+}
+
+#togglePassword {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+#togglePassword:hover {
+    color: #0056b3;
+}
+
+.btn-back {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px; /* Adjusted padding */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Adjusted font size */
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-back i {
+    margin-right: 8px;
+}
+
+.btn-back:hover {
+    background-color: #0056b3;
+}
+/* Enhanced Complaint Overview Section */
+.complaint-overview {
+    margin-top: 30px;
+    padding: 20px;
+    background: #ffffff; /* White background for the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: 1px solid #dee2e6; /* Light border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for hover effect */
+}
+
+
+.complaint-overview h2 {
+    color: #007bff;
+    font-size: 22px; /* Slightly larger font size */
+    margin-bottom: 20px; /* More spacing below the heading */
+    text-align: center; /* Center align the heading */
+    font-weight: bold; /* Bold font for emphasis */
+}
+
+.complaint-overview table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.complaint-overview th, 
+.complaint-overview td {
+    text-align: left;
+    padding: 15px; /* Increased padding for more spacing */
+    font-size: 16px; /* Increased font size for better readability */
+    border-bottom: 1px solid #dee2e6; /* Light border between rows */
+    vertical-align: middle; /* Align content vertically in the middle */
+}
+
+/* Header Row Styling */
+.complaint-overview th {
+    background-color: #007bff; /* Blue background for header */
+    color: #ffffff; /* White text color */
+    font-weight: 600; /* Bold font weight */
+}
+
+/* Specific Status Colors */
+.resolved-row td:first-child {
+    color: #28a745; /* Resolved - Green */
+}
+
+.in-progress-row td:first-child {
+    color: #ffc107; /* In Progress - Yellow */
+}
+
+.pending-row td:first-child {
+    color: #dc3545; /* Pending - Red */
+}
+
+.total-row td:first-child {
+    color: #343a40; /* Total Complaints - Dark */
+}
+
+/* Icon Styling */
+.complaint-overview i {
+    margin-right: 8px; /* Spacing between icon and text */
+}
+
+/* Hover Effects */
+.complaint-overview tr:hover td {
+    background-color: #f1f1f1; /* Subtle background change on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.resolved-row:hover td:first-child {
+    color: #218838; /* Darker Green on hover */
+}
+
+.in-progress-row:hover td:first-child {
+    color: #e0a800; /* Darker Yellow on hover */
+}
+
+.pending-row:hover td:first-child {
+    color: #c82333; /* Darker Red on hover */
+}

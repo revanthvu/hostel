@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gate Dashboard</title>
+  <link rel="stylesheet" href="css/gate.css">
+</head>
+<body>
+
+  <h2>🚪 Gate QR Verification</h2>
+
+  <div class="card">
+    <h3>📸 Scan Student Outing QR</h3>
+
+    <video id="gateQRVideo" width="280" height="220" autoplay></video><br>
+    <button onclick="startGateScanner()">Start Scan</button>
+
+    <p id="gateScanResult"></p>
+  </div>
+
+  <div class="card">
+    <h3>📋 Gate Log</h3>
+    <table class="table" id="gateLogTable">
+      <tr>
+        <th>Student ID</th>
+        <th>Action</th>
+        <th>Time</th>
+      </tr>
+    </table>
+  </div>
+
+  <script src="js/gate.js"></script>
+</body>
+</html>

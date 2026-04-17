@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parent Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+  <h2>👨‍👩‍👦 Parent Dashboard</h2>
+
+  <div class="dashboard">
+
+    <!-- STUDENT INFO -->
+    <div class="card">
+      <h3>🎓 Student Info</h3>
+      <p>Name: Student Name</p>
+      <p>Room: Block A - 203</p>
+      <p>Hostel: Boys Hostel</p>
+    </div>
+    <!-- ATTENDANCE HISTORY -->
+<div class="card">
+  <h3>📅 Attendance History</h3>
+  <table class="table">
+    <tr>
+      <th>Date</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td>12-02-2026</td>
+      <td>Present</td>
+    </tr>
+    <tr>
+      <td>11-02-2026</td>
+      <td>Absent</td>
+    </tr>
+  </table>
+</div>
+
+<!-- OUTING HISTORY -->
+<div class="card">
+  <h3>🚶 Outing History</h3>
+  <table class="table">
+    <tr>
+      <th>Date</th>
+      <th>Type</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td>10-02-2026</td>
+      <td>Evening Outing</td>
+      <td>Approved</td>
+    </tr>
+    <tr>
+      <td>08-02-2026</td>
+      <td>Leave</td>
+      <td>Rejected</td>
+    </tr>
+  </table>
+</div>
+<!-- OUTING APPROVAL -->
+<div class="card">
+  <h3>🚶 Outing Approval Request</h3>
+
+  <p><strong>Student:</strong> Rahul Kumar</p>
+  <p><strong>Outing Type:</strong> Overnight Leave</p>
+  <p><strong>Date:</strong> 14-02-2026</p>
+
+  <button onclick="approveOuting()">Approve</button>
+  <button onclick="rejectOuting()" style="background:red;">Reject</button>
+
+  <p id="outingApprovalStatus"></p>
+</div>
+<div class="card">
+  <h3>🔐 Outing OTP</h3>
+  <p>Your OTP for outing verification:</p>
+  <h2 id="parentOtp">123456</h2>
+</div>
+<!-- OTP / QR ALERTS -->
+<div class="card">
+  <h3>🔐 OTP / QR Alerts</h3>
+  <ul id="otpQrAlerts" class="notification-list">
+    <li class="info">Waiting for alerts...</li>
+  </ul>
+</div>
+
+<!-- FEE & RECEIPTS -->
+<div class="card">
+  <h3>💳 Hostel Fees</h3>
+  <p>Status: <strong>Paid</strong></p>
+
+  <table class="table">
+    <tr>
+      <th>Date</th>
+      <th>Amount</th>
+      <th>Receipt</th>
+    </tr>
+    <tr>
+      <td>01-01-2026</td>
+      <td>₹45,000</td>
+      <td><a href="#">Download</a></td>
+    </tr>
+  </table>
+</div>
+    <!-- ATTENDANCE -->
+    <div class="card">
+      <h3>📊 Attendance</h3>
+      <p>College Attendance: 85%</p>
+      <p>Hostel Attendance: 92%</p>
+    </div>
+
+    <!-- NOTIFICATIONS -->
+    <div class="card">
+      <h3>🔔 Notifications</h3>
+      <ul id="notificationList" class="notification-list">
+        <li class="info">Loading notifications...</li>
+      </ul>
+    </div>
+    <!-- EMERGENCY ALERT -->
+<div class="card emergency">
+  <h3>🚨 Emergency Alert</h3>
+  <p id="emergencyMsg">No active emergency</p>
+  <button onclick="ackEmergency()">Acknowledge</button>
+  <p id="ackStatus"></p>
+</div>
+
+  </div>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
