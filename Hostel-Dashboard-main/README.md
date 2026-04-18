@@ -45,5 +45,4 @@ Submit a pull request.
 
 
 
-📧 Contact
-Feel free to reach out for any queries or suggestions: rahanish4@gmail.com.
+
